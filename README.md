@@ -1,1 +1,1 @@
-# Jenny
+# js-study
