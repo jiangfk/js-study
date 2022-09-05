@@ -1,0 +1,1 @@
+document.getElementsByClassName('main-title')[0].innerText = '命令式编程'
