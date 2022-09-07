@@ -10,9 +10,8 @@ class Validator {
             return value.trim().length > 0
         }
         if (flag === this.MIN_LENGTH) {
-            return value.trim().length > validatorValue
+            return value.trim().length >= validatorValue
         }
-        return false
     }
     
 }
@@ -46,7 +45,7 @@ class UserForm {
         const userValue = this.userName.value;
         const passwordValue = this.password.value;
         // 静态属性方法可以直接使用类名来调用
-        if (!Validator.validatorHandler(userValue, Validator.REQUIRED) || !Validator.validatorHandler(passwordValue, Validator.MIN_LENGTH, 5)) {
+        if (!Validator.validatorHandler(userValue, Validator.REQUIRED) || !Validator.validatorHandler(passwordValue, Validator.MIN_LENGTH, 6)) {
             alert('invalid input! userName or password is wrong (the password should be at least 6 characters)!')
             return
         }
